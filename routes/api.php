@@ -15,9 +15,13 @@ use App\Http\Controllers\RecordLabelController;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-Route::get('/greeting', function () {
-    return 'Hello World';
-});
+
+/** ACTION ENDPOINTS **/
+
+Route::post('addToLibrary', 'App\Http\Controllers\LibraryController@addToLibrary');
+
+
+/** RESOURCES ENDPOINTS **/
 
 Route::resource('library', LibraryController::class)->only([
     'index'
@@ -30,6 +34,7 @@ Route::resource('getGenres', GenresController::class)->only([
 Route::resource('getLabels', RecordLabelController::class)->only([
     'index'
 ]);
+
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();

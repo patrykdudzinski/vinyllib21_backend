@@ -12,8 +12,9 @@ class Library extends Model
     protected $table = 'vinyl_lib';
     protected $primaryKey = 'id';
     public $incrementing = true;
-
-
+    protected $fillable = ['name', 'artist', 'year', 'record_label', 'genre'];
+    public $timestamps = false;
+    
     public function getLibrary(){
         
         return DB::table('vinyl_lib')
@@ -23,5 +24,6 @@ class Library extends Model
             ->orderBy('artist', 'asc')
             ->get();
     }
+
 
 }
