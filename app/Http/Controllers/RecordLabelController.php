@@ -26,4 +26,14 @@ class RecordLabelController extends Controller
         );
     }
 
+    public function addNew(Request $request){
+
+        $data = json_decode($request->getContent());
+        $record_label = RecordLabels::create([
+            'name' => $data->name
+        ]);
+ 
+        return $record_label->id;   
+    }
+
 }

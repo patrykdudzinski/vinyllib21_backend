@@ -11,4 +11,6 @@ class RecordLabels extends Model
     protected $table = 'vinyl_record_label';
     protected $primaryKey = 'id';
     public $incrementing = true;
+    protected $fillable = ['name'];
+    public $timestamps = false;
 }

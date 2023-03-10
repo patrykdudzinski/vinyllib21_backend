@@ -19,6 +19,7 @@ use App\Http\Controllers\RecordLabelController;
 /** ACTION ENDPOINTS **/
 
 Route::post('addToLibrary', 'App\Http\Controllers\LibraryController@addToLibrary');
+Route::post('addRecordLabel', 'App\Http\Controllers\RecordLabelController@addNew');
 
 
 /** RESOURCES ENDPOINTS **/
