@@ -12,5 +12,6 @@ class Genres extends Model
     protected $table = 'vinyl_genre';
     protected $primaryKey = 'id';
     public $incrementing = true;
-
+    protected $fillable = ['name'];
+    public $timestamps = false;
 }

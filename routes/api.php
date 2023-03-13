@@ -20,6 +20,7 @@ use App\Http\Controllers\RecordLabelController;
 
 Route::post('addToLibrary', 'App\Http\Controllers\LibraryController@addToLibrary');
 Route::post('addRecordLabel', 'App\Http\Controllers\RecordLabelController@addNew');
+Route::post('addGenre', 'App\Http\Controllers\GenresController@addNew');
 
 
 /** RESOURCES ENDPOINTS **/

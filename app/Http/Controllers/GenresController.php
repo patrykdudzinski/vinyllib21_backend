@@ -25,4 +25,14 @@ class GenresController extends Controller
         );
     }
 
+    public function addNew(Request $request){
+
+        $data = json_decode($request->getContent());
+        $genre = Genres::create([
+            'name' => $data->name
+        ]);
+ 
+        return $genre->id;   
+    }
+
 }
